@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Restaurant Booking Form</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Restaurant Booking Form</h2>
+    <form id="bookingForm">
+        <label for="bookingType">Choice of booking:</label>
+        <select id="bookingType" onchange="handleBookingTypeChange()">
+            <option value="fullDay">Full day booking</option>
+            <option value="halfDay">Half day booking</option>
+            <option value="hourly">Hourly booking</option>
+        </select>
+
+        <label for="username">User name:</label>
+        <input type="text" id="username" required>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="numberOfPersons">Number of persons:</label>
+        <input type="number" id="numberOfPersons" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <div id="slotContainer" style="display: none;">
+            <label for="slot">Slot:</label>
+            <select id="slot">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+        </div>
+        style="display: none;"
+        <div id="timeContainer">
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function handleBookingTypeChange() {
+            var bookingType = document.getElementById("bookingType").value;
+            var slotContainer = document.getElementById("slotContainer");
+            var timeContainer = document.getElementById("timeContainer");
+
+            // Reset display of slotContainer and timeContainer
+            slotContainer.style.display = "none";
+            timeContainer.style.display = "none";
+
+            if (bookingType === "halfDay") {
+                slotContainer.style.display = "block";
+            } else if (bookingType === "hourly") {
+                timeContainer.style.display = "block";
+            }
+        }
+
+        document.getElementById("bookingForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission for demo purposes
+
+            // Retrieve form values
+            var bookingType = document.getElementById("bookingType").value;
+            var username = document.getElementById("username").value;
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            var email = document.getElementById("email").value;
+            var numberOfPersons = document.getElementById("numberOfPersons").value;
+            var date = document.getElementById("date").value;
+            var slot = document.getElementById("slot").value;
+            var time = document.getElementById("time").value;
+
+            // Print form values (you can modify this part to perform actual form submission)
+            console.log("Booking Type: " + bookingType);
+            console.log("User Name: " + username);
+            console.log("Mobile Number: " + mobileNumber);
+            console.log("Email: " + email);
+            console.log("Number of Persons: " + numberOfPersons);
+            console.log("Date: " + date);
+
+            if (bookingType === "halfDay") {
+                console.log("Slot: " + slot);
+            } else if (bookingType === "hourly") {
+                console.log("Time: " + time);
+            }
+
+            // Reset form
+            document.getElementById("bookingForm").value;
+        });
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Restaurant Booking Form</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Restaurant Booking Form</h2>
+    <form id="bookingForm">
+        <table>
+            <label for="bookingType">Choice of booking:</label>
+            <select id="bookingType" onchange="handleBookingTypeChange()">
+                <option value="fullDay">Full day booking</option>
+                <option value="halfDay">Half day booking</option>
+                <option value="hourly">Hourly booking</option>
+            </select>
+
+            <label for="username">User name:</label>
+            <input type="text" id="username" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="numberOfPersons">Number of persons:</label>
+            <input type="number" id="numberOfPersons" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <div id="slotContainer" style="display: none;">
+                <label for="slot">Slot:</label>
+                <select id="slot">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+
+            <div id="timeContainer" style="display: none;">
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function handleBookingTypeChange() {
+            var bookingType = document.getElementById("bookingType").value;
+            var slotContainer = document.getElementById("slotContainer");
+            var timeContainer = document.getElementById("timeContainer");
+
+            // Reset display of slotContainer and timeContainer
+            slotContainer.style.display = "none";
+            timeContainer.style.display = "none";
+
+            if (bookingType === "halfDay") {
+                slotContainer.style.display = "block";
+            } else if (bookingType === "hourly") {
+                timeContainer.style.display = "block";
+            }
+        }
+
+        document.getElementById("bookingForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission for demo purposes
+
+            // Retrieve form values
+            var bookingType = document.getElementById("bookingType").value;
+            var username = document.getElementById("username").value;
+            var mobileNumber = document.getElementById("mobileNumber").value;
+            var email = document.getElementById("email").value;
+            var numberOfPersons = document.getElementById("numberOfPersons").value;
+            var date = document.getElementById("date").value;
+            var slot = document.getElementById("slot").value;
+            var time = document.getElementById("time").value;
+
+            // Print form values (you can modify this part to perform actual form submission)
+            console.log("Booking Type: " + bookingType);
+            console.log("User Name: " + username);
+            console.log("Mobile Number: " + mobileNumber);
+            console.log("Email: " + email);
+            console.log("Number of Persons: " + numberOfPersons);
+            console.log("Date: " + date);
+
+            if (bookingType === "halfDay") {
+                console.log("Slot: " + slot);
+            } else if (bookingType === "hourly") {
+                console.log("Time: " + time);
+            }
+
+            // Reset form
+            document.getElementById("bookingForm");
+        });
+    </script>
+</body>
+
+</html>
